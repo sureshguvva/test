@@ -14,6 +14,9 @@ pipeline {
         sh 'mvn clean install'
     
       }
+      stage('docker'){
+        sh 'echo "hello world"'
+      }
     }
    }
   }
