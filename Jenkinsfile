@@ -15,7 +15,9 @@ pipeline {
         }
     }
       stage('docker') {
+        steps { 
         sh 'docker pull nginx'
+        }
       }
     }
    }
