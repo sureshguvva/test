@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout SCM') {
             steps {
-                 git 'https://github.com/sureshguvva/test.git'
+                 sh 'git clone https://github.com/sureshguvva/test.git'
             }
     }
     
@@ -12,9 +12,8 @@ pipeline {
       steps {
         sh 'mvn -version'
         sh 'mvn clean install'
-    
-      }
-      stage('docker'){
+        }
+      stage('docker') {
         sh 'docker pull nginx'
       }
     }
