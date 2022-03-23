@@ -13,9 +13,10 @@ pipeline {
         sh 'mvn -version'
         sh 'mvn clean install'
         }
+    }
       stage('docker') {
         sh 'docker pull nginx'
       }
     }
    }
-  }
+  
