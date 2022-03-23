@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout SCM') {
             steps {
-                 git 'https://github.com/arjundevop/pipeline.git'
+                 git 'https://github.com/sureshguvva/test.git'
             }
     }
     
@@ -15,7 +15,7 @@ pipeline {
     
       }
       stage('docker'){
-        sh 'echo "hello world"'
+        sh 'docker pull nginx'
       }
     }
    }
